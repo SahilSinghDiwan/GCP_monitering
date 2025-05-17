@@ -19,12 +19,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configuration
-project_id = os.getenv("project_id")
-instance_name = os.getenv("instance_name")
-zone = os.getenv("zone", "us-central1-a") 
-sender_email = os.getenv("sender_email")
-app_password = os.getenv("app_password")
-receiver_email = os.getenv("receiver_email")
+project_id = os.getenv("PROJECT_ID")
+instance_name = os.getenv("INSTANCE_NAME")
+zone = os.getenv("ZONE") 
+sender_email = os.getenv("SENDER_EMAIL")
+app_password = os.getenv("APP_PASSWORD")
+receiver_email = os.getenv("RECEIVER_EMAIL")
 
 def get_google_credentials(credentials_path=None):
     """

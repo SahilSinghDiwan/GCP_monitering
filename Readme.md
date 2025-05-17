@@ -37,15 +37,15 @@ Create a `.env` file in the project root with the following variables:
 
 ```env
 # GCP Configuration
-project_id=
-instance_name=
-zone=
+PROJECT_ID=
+INSTANCE_NAME=
+ZONE=
+
 
 # Email Configuration
-
-sender_email=
-app_password=
-receiver_email=
+SENDER_EMAIL=
+APP_PASSWORD=
+RECEIVER_EMAIL=
 
 ```
 
@@ -79,10 +79,12 @@ The script will automatically:
 
 | Variable                    | Description                                   | Required | Default   |
 | --------------------------- | --------------------------------------------- | -------- | --------- |
-| `project_id`                | Your GCP Project ID                           | ✅       | -         |
-| `sender_email`              | Email address to send alerts from             | ✅       | -         |
-| `app_password`              | App password for the sender email             | ✅       | -         |
-| `receiver_email`            | Email address to receive alerts               | ✅       | -         |
+| `PROJECT_ID`                | Your GCP Project ID                           | ✅       | -         |
+| `INSTANCE_NAME`             | Name of the GCP instance to monitor           | ✅       | -         |
+| `ZONE`                      | Zone where the instance is located            | ✅       | -         |
+| `SENDER_EMAIL`              | Email address to send alerts from             | ✅       | -         |
+| `APP_PASSWORD`              | App password for the sender email             | ✅       | -         |
+| `RECEIVER_EMAIL`            | Email address to receive alerts               | ✅       | -         |
 | `CPU_UTILIZATION_THRESHOLD` | CPU usage threshold (0-1) to trigger alerts   | ❌       | 0.2 (20%) |
 | `CHECK_INTERVAL_MINUTES`    | How often to check instance metrics (minutes) | ❌       | 60        |
 
